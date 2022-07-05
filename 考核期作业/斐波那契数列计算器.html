@@ -32,7 +32,11 @@
             }
             function doFib() {
                 var n = parseInt(document.getElementById("n").value);
-                if (isNaN(n) || n < 1) {
+                if ((n) % 1 !== 0) {
+                    document.getElementById("t").innerHTML = "输入超出范围或不合法";
+                    return;
+                }
+                else if (isNaN(n) || n < 1) {
                     document.getElementById("t").innerHTML = "输入超出范围或不合法";
                     return;
                 }
