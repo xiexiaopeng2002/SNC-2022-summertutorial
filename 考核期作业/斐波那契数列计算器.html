@@ -33,8 +33,12 @@
                         return x;
                     }
                     function doFib() {
-                        var n = parseInt(document.getElementById("n").value);
-                        if (isNaN(n) || n < 1) {
+                        var n = document.getElementById("n").value;
+                        if ((n) % 1 !== 0) {
+                            document.getElementById("t").innerHTML = "输入超出范围或不合法";
+                            return;
+                        }
+                        else if (isNaN(n) || n < 1) {
                             document.getElementById("t").innerHTML = "输入超出范围或不合法";
                             return;
                         }
@@ -43,7 +47,7 @@
                             return;
                         }
                         else {
-                            document.getElementById("t").innerHTML = "第" + document.getElementById("n").value +"个斐波那契数是:";
+                            document.getElementById("t").innerHTML = "第" + document.getElementById("n").value + "个斐波那契数是:";
                         }
                         var a;
                         var r = document.getElementById("r");
@@ -59,7 +63,7 @@
                             <TD style="PADDING-BOTTOM: 30px; PADDING-TOP: 30px" vAlign=top align=middle>
                                 <P>输入数值: <INPUT id=n></P>
                                 <P id=t>请输入斐波那契数的序号</P>
-                                    <p><textarea id=r rows="1" name="S1" cols="29"></textarea></p>
+                                <p><textarea id=r rows="1" name="S1" cols="29"></textarea></p>
                                 <P><INPUT onclick=doFib(); type=button value=计算></P>
                             </TD>
                         </TR>
