@@ -96,7 +96,7 @@
                     <span class="score">01</span>
                     <span class="title">
                         <a href="https://xiexiaopeng2002.github.io/SNC-2022-summertutorial/考核期作业/斐波那契数列计算器.html"
-                            target="_blank" rel="noopener" id="1">斐波那契数列计算器</a>
+                            target="_blank" rel="noopener" id="1">正在加载</a>
                         <span class="host"> 考核期作业</span>
                     </span>
                     <br>
@@ -117,7 +117,7 @@
                     <span class="score">01</span>
                     <span class="title">
                         <a href="https://xiexiaopeng2002.github.io/SNC-2022-summertutorial/考核期作业/斐波那契数列计算器.html"
-                            target="_blank" rel="noopener" id="2">斐波那契数列计算器</a>
+                            target="_blank" rel="noopener" id="2">正在加载</a>
                         <span class="host"> 考核期作业</span>
                     </span>
                     <br>
@@ -138,7 +138,7 @@
                     <span class="score">01</span>
                     <span class="title">
                         <a href="https://xiexiaopeng2002.github.io/SNC-2022-summertutorial/考核期作业/斐波那契数列计算器.html"
-                            target="_blank" rel="noopener" id="3">斐波那契数列计算器</a>
+                            target="_blank" rel="noopener" id="3">正在加载</a>
                         <span class="host"> 考核期作业</span>
                     </span>
                     <br>
@@ -159,7 +159,7 @@
                     <span class="score">01</span>
                     <span class="title">
                         <a href="https://xiexiaopeng2002.github.io/SNC-2022-summertutorial/考核期作业/斐波那契数列计算器.html"
-                            target="_blank" rel="noopener" id="4">斐波那契数列计算器</a>
+                            target="_blank" rel="noopener" id="4">正在加载</a>
                         <span class="host"> 考核期作业</span>
                     </span>
                     <br>
@@ -180,7 +180,7 @@
                     <span class="score">01</span>
                     <span class="title">
                         <a href="https://xiexiaopeng2002.github.io/SNC-2022-summertutorial/考核期作业/斐波那契数列计算器.html"
-                            target="_blank" rel="noopener" id="5">斐波那契数列计算器</a>
+                            target="_blank" rel="noopener" id="5">正在加载</a>
                         <span class="host"> 考核期作业</span>
                     </span>
                     <br>
@@ -209,9 +209,14 @@
         for (const itemID of list) {
             const post = await fetch(`${basicURL}item/${itemID}.json?print=pretty`).then(res => res.json());
             const a = document.getElementById(`${x}`)
-            x = x + 1
             a.innerText = post.title
+            a.href = post.url
+            document.getElementsByClassName("score")[x - 1].innerText = post.score
+            document.getElementsByClassName("time")[x - 1].innerText = post.time
+            document.getElementsByClassName("by")[x - 1].children[0].innerText = post.by
+            document.getElementsByClassName("score")[x - 1].innerText = post.score
             //newsList.replaceChild(a)
+            x = x + 1
         }
     </script>
 </body>
