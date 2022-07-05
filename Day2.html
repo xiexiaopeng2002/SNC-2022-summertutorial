@@ -226,9 +226,10 @@
             a.href = post.url
             m = parseInt((Math.round(new Date() / 1000) - post.time) / 60)
             document.getElementsByClassName("score")[x - 1].innerText = post.score
+            document.getElementsByClassName("comments-link")[x - 1].children[0].innerText = `${post.kids.length} comments`
             document.getElementsByClassName("time")[x - 1].innerText = timeago(m)
             document.getElementsByClassName("by")[x - 1].children[0].innerText = post.by
-            document.getElementsByClassName("host")[x - 1].innerText = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b/.exec(post.url)
+            document.getElementsByClassName("host")[x - 1].innerText = /(www\.){0}[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b/.exec(post.url)
             //newsList.replaceChild(a)
             x = x + 1
         }
