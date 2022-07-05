@@ -209,7 +209,6 @@
         for (const itemID of list) {
             const post = await fetch(`${basicURL}item/${itemID}.json?print=pretty`).then(res => res.json());
             const a = document.getElementById(`${x}`)
-            document.
             x = x + 1
             a.innerText = post.title
             //newsList.replaceChild(a)
