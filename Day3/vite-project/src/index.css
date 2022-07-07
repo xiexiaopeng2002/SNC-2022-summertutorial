@@ -1,0 +1,183 @@
+/* common style */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #999999;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.gray {
+  color: #aaaaaa;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  background: #F2F3F5;
+}
+
+.container {
+  background: #F2F3F5;
+  width: 100%;
+  height: 100%;
+}
+
+/* 导航栏样式 */
+nav {
+  height: 70px;
+  width: 100%;
+  background: #FF6600;
+  position: relative;
+  line-height: 70px;
+}
+
+/* width设置失败 导致无法居中 */
+nav>div {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.nav-l {
+  float: left;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-l>img {
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 15px;
+}
+
+.nav-l>ul {
+  position: relative;
+}
+
+.nav-l>ul>li {
+  color: #ededed;
+  float: left;
+  margin-left: 30px;
+}
+
+.nav-l>ul>li:hover {
+  cursor: pointer;
+  color: white;
+}
+
+/* 设置右浮动 */
+/* .nav-r{float: right;color: white;} */
+.nav-r {
+  float: right;
+  color: white;
+  margin-left: 520px;
+}
+
+/* 第二横栏样式 */
+.m {
+  height: 60px;
+  background: white;
+  border-bottom: 1px solid #dddddd;
+}
+
+.m>div {
+  width: 200px;
+  margin: 0 auto;
+  line-height: 60px;
+}
+
+/* 内容样式 */
+.content {
+  width: 980px;
+  margin: 10px auto 0 auto;
+}
+
+.tmp {
+  width: 100%;
+  height: 100px;
+  background: #FFF;
+  border-bottom: #dddddd 2px solid;
+  box-sizing: border-box;
+  padding-top: 30px;
+}
+
+.tmp>span:nth-of-type(1) {
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: orange;
+  font-size: 24px;
+  float: left;
+  display: block;
+}
+
+/*.passage-id{color: orange;font-size: 24px;}*/
+
+/* footer */
+footer {
+  margin-top: 20px;
+  height: 100px;
+  background: #dddddd;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer>span:nth-of-type(1) {
+  font-size: 16px;
+  position: relative;
+  top: -10px;
+}
+
+footer>span:nth-of-type(2) {
+  color: #666666;
+}
+
+
+@media screen and (max-width: 767px) {
+  nav>div {
+    width: 100%;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .tmp {
+    position: relative;
+    top: -10px;
+  }
+
+  .tmp>span:nth-of-type(1) {
+    width: 15%;
+    font-size: 10px;
+    margin: 0;
+    padding: 2% 2%;
+    position: relative;
+    top: -15px;
+  }
+
+  .tmp>span:nth-of-type(2) {
+    width: 80%;
+    font-size: 12px;
+    margin: 0;
+    padding: 2% 0;
+    position: relative;
+    top: -10px;
+  }
+}
